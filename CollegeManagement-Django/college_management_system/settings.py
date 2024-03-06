@@ -88,19 +88,16 @@ WSGI_APPLICATION = 'college_management_system.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.1/ref/settings/#databases
 
+
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'defaultdb',
+        'USER': 'doadmin',
+        'PASSWORD': 'AVNS_RAk5VzvdNnFYJ4Gp4Zx',
+        'HOST': 'db-postgresql-nyc3-71736-do-user-12510524-0.c.db.ondigitalocean.com', # This will be provided by DigitalOcean
+        'PORT': '25060', # This will be provided by DigitalOcean
     }
-    # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql',
-    #     'NAME': 'django',
-    #     'USER': os.environ.get('DB_USER'),
-    #     'PASSWORD': os.environ.get('DB_PASS'),
-    #     'HOST': '127.0.0.1',
-    #     'PORT': '3307'
-    # }
 }
 
 
